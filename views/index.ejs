@@ -12,6 +12,12 @@
     <header>
       <h1>Twitter Feed</h1>
     </header>
+
+    <form method='get' action='/'>
+      <input placeholder="Twitter Handle" type="text" name="username">
+      <button type="submit">Submit</button>
+    </form>
+
     <div id='tweet-wrapper' class='container'>
       <% tweets.forEach(function(tweet) { %>
         <div class='tweet'>
