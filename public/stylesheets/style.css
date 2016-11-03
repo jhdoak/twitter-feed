@@ -31,7 +31,14 @@ header {
 header h1 {
   margin: 0;
   font-family: 'Dosis', sans-serif;
+}
+
+header h1 a {
   color: #97B1A6;
+}
+
+header h1 a:hover {
+  color: orange;
 }
 
 
