@@ -1,20 +1,55 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
+    <title>Twitter Feed</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-    <% tweets.forEach(function(tweet) { %>
-      <div class='tweet-container'>
-        <img src="<%= tweet.user.profile_image_url %>"/>
-        <p class="full-name"><%= tweet.user.name %></p>
-        <p class="username"><%= tweet.user.screen_name %></p>
-        <p class="text"><%= tweet.text %></p>
+    <h1>Twitter Feed</h1>
+
+    <div class='tweet'>
+      <div class='main-details'>
+        <img src="http://pbs.twimg.com/profile_images/702185727262482432/n1JRsFeB_normal.png"/>
+        <h4>Node.js</h4>
+        <h6>nodejs</h6>
       </div>
-    <% }) %>
-    <p><%= tweets %></p>
+      <div class='tweet-body'>
+        <p>RT @jdalton: 👏 Node 0.10 is being deprecated on AWS Lambda &; won't be available to new functions starting 11/14 – https://t.co/w7lKwOnXI3</p>
+      </div>
+    </div>
+
+    <div class='tweet'>
+      <div class='main-details'>
+        <img src="http://pbs.twimg.com/profile_images/702185727262482432/n1JRsFeB_normal.png"/>
+        <h4>Node.js</h4>
+        <h6>nodejs</h6>
+      </div>
+      <div class='tweet-body'>
+        <p>Why is it important to attend conferences like Node.js Interactive?</p>
+      </div>
+    </div>
+
+    <div class='tweet'>
+      <div class='main-details'>
+        <img src="http://pbs.twimg.com/profile_images/702185727262482432/n1JRsFeB_normal.png"/>
+        <h4>Node.js</h4>
+        <h6>nodejs</h6>
+      </div>
+      <div class='tweet-body'>
+        <p>Why are more companies turning to Node.js? @darrylktaft explores this topic in his latest article: https://t.co/cEXCh9eDt5</p>
+      </div>
+    </div>
+
+    <div class='tweet'>
+      <div class='main-details'>
+        <img src="http://pbs.twimg.com/profile_images/702185727262482432/n1JRsFeB_normal.png"/>
+        <h4>Node.js</h4>
+        <h6>nodejs</h6>
+      </div>
+      <div class='tweet-body'>
+        <p>Node.js v0.10 reached its "end of life" yesterday. ⏰ to upgrade! Details on Node.js v6 here: https://t.co/FuXxfl6Jko</p>
+      </div>
+    </div>
+
   </body>
 </html>
