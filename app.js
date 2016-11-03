@@ -5,7 +5,7 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var Twitter = require('twitter');
-var io = require('socket.io')(server);
+var io = require('socket.io');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
@@ -64,6 +64,8 @@ var twitter = new Twitter({
   access_token_key: process.env.TWITTER_ACCESS_TOKEN_KEY,
   access_token_secret: process.env.TWITTER_ACCESS_TOKEN_SECRET
 });
+
+console.log('process:', process.env.TWITTER_CONSUMER_KEY);
 
 
 module.exports = app;
