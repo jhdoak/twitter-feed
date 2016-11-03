@@ -15,13 +15,13 @@
     <div id='tweet-wrapper' class='container'>
       <% tweets.forEach(function(tweet) { %>
         <div class='tweet'>
-          <a href="http://www.twitter.com/nodejs">
-            <div class='main-details container'>
+          <div class='main-details container'>
+            <a href="http://www.twitter.com/nodejs" class='container'>
               <img src="<%= tweet.user.profile_image_url %>"/>
               <h4><%= tweet.user.name %></h4>
               <h6><%='@' + tweet.user.screen_name %></h6>
-            </div>
-          </a>
+            </a>
+          </div>
           <div class='tweet-body'>
             <p><%= tweet.text %></p>
           </div>

@@ -77,6 +77,9 @@ header h1 {
   padding-bottom: 5px;
   border-bottom: 1px solid black;
   margin-bottom: 5px;
+}
+
+.main-details a {
   color: black;
 
   /* Flexbox Details */
@@ -86,7 +89,7 @@ header h1 {
   justify-content: center;
 }
 
-.main-details:hover {
+.main-details a:hover {
   color: slategray;
 }
 
@@ -126,3 +129,18 @@ header h1 {
 }
 
 
+@media screen and (min-width: 751px) {
+/*  .tweet {
+    width: 48%;
+    margin: 5px 1%;
+  }
+*/
+  .tweet h4 {
+    font-size: 1.3em;
+    margin-bottom: 2px;
+  }
+
+  .tweet h6 {
+    font-size: .9em;
+  }
+}
