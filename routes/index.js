@@ -34,25 +34,25 @@ var Twitter = require('twitter');
 // This route configuraton uses the REST API to get the last 20 tweets
 // from a specified account
 router.get('/', function(req, res, next) {
-  // var twitter = new Twitter({
-  //   consumer_key: process.env.TWITTER_CONSUMER_KEY,
-  //   consumer_secret: process.env.TWITTER_CONSUMER_SECRET,
-  //   access_token_key: process.env.TWITTER_ACCESS_TOKEN_KEY,
-  //   access_token_secret: process.env.TWITTER_ACCESS_TOKEN_SECRET
-  // });
+  var twitter = new Twitter({
+    consumer_key: process.env.TWITTER_CONSUMER_KEY,
+    consumer_secret: process.env.TWITTER_CONSUMER_SECRET,
+    access_token_key: process.env.TWITTER_ACCESS_TOKEN_KEY,
+    access_token_secret: process.env.TWITTER_ACCESS_TOKEN_SECRET
+  });
 
-  // console.log('process:', process.env.TWITTER_CONSUMER_KEY);
-  // // https://dev.twitter.com/rest/reference/get/statuses/user_timeline
-  // twitter.get('statuses/user_timeline', { screen_name: 'nodejs', count: 20 }, function(error, tweets, response) {
-  //   if (!error) {
-  //     console.log('tweets:', tweets[0]);
-  //     res.status(200).render('index', { title: 'Express', tweets: tweets });
-  //   }
-  //   else {
-  //     res.status(500).json({ error: error });
-  //   }
-  // });
-  res.render('index');
+  console.log('process:', process.env.TWITTER_CONSUMER_KEY);
+  // https://dev.twitter.com/rest/reference/get/statuses/user_timeline
+  twitter.get('statuses/user_timeline', { screen_name: 'nodejs', count: 20 }, function(error, tweets, response) {
+    if (!error) {
+      console.log('tweets:', tweets[0]);
+      res.status(200).render('index', { title: 'Express', tweets: tweets });
+    }
+    else {
+      res.status(500).json({ error: error });
+    }
+  });
+  // res.render('index');
 });
 
 module.exports = router;
