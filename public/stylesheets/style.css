@@ -167,4 +167,8 @@ header h1 {
   .tweet p {
     font-size: 1em;
   }
+
+  .main-details img {
+    margin-right: 5px;
+  }
 }

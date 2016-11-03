@@ -43,7 +43,7 @@ router.get('/', function(req, res, next) {
 
   console.log('process:', process.env.TWITTER_CONSUMER_KEY);
   // https://dev.twitter.com/rest/reference/get/statuses/user_timeline
-  twitter.get('statuses/user_timeline', { screen_name: 'nodejs', count: 20 }, function(error, tweets, response) {
+  twitter.get('statuses/user_timeline', { screen_name: 'cnnpolitics', count: 20 }, function(error, tweets, response) {
     if (!error) {
       console.log('tweets:', tweets[0]);
       res.status(200).render('index', { title: 'Express', tweets: tweets });
