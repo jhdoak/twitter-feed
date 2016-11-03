@@ -1,0 +1,30 @@
+// Start of a function to minimize tweet details
+// returned to the client from the express server
+function tweetDetails(tweet) {
+  var minimizedTweet = {
+    text: tweet.text,
+    user: {
+      name: tweet.user.name,
+
+    }
+  }
+  return {
+    text: text,
+    user: {}
+  }
+}
+
+
+
+
+
+// ejs for displaying tweets returned from API call
+<% tweets.forEach(function(tweet) { %>
+  <div class='tweet-container'>
+    <img src="<%= tweet.user.profile_image_url %>"/>
+    <p class="full-name"><%= tweet.user.name %></p>
+    <p class="username"><%= tweet.user.screen_name %></p>
+    <p class="text"><%= tweet.text %></p>
+  </div>
+<% }) %>
+<p><%= tweets %></p>

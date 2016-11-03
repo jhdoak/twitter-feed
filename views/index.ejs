@@ -7,6 +7,14 @@
   <body>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
-    <p><%= stream %></p>
+    <% tweets.forEach(function(tweet) { %>
+      <div class='tweet-container'>
+        <img src="<%= tweet.user.profile_image_url %>"/>
+        <p class="full-name"><%= tweet.user.name %></p>
+        <p class="username"><%= tweet.user.screen_name %></p>
+        <p class="text"><%= tweet.text %></p>
+      </div>
+    <% }) %>
+    <p><%= tweets %></p>
   </body>
 </html>

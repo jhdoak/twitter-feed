@@ -2,9 +2,38 @@ var express = require('express');
 var router = express.Router();
 var Twitter = require('twitter');
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
 
+// Revisit this route if using the Streaming API
+/* GET home page. */
+// router.get('/', function(req, res, next) {
+
+//   var twitter = new Twitter({
+//     consumer_key: process.env.TWITTER_CONSUMER_KEY,
+//     consumer_secret: process.env.TWITTER_CONSUMER_SECRET,
+//     access_token_key: process.env.TWITTER_ACCESS_TOKEN_KEY,
+//     access_token_secret: process.env.TWITTER_ACCESS_TOKEN_SECRET
+//   });
+
+//   console.log('process:', process.env.TWITTER_CONSUMER_KEY);
+
+//   var stream = twitter.stream('statuses/filter', { track: 'javascript' });
+//   stream.on('data', function(event) {
+//     console.log('event:', event);
+//     console.log('event.text:', event.text);
+//   });
+
+//   stream.on('error', function(error) {
+//     throw error;
+//   });
+//   // Hit the Twitter API and get tweets, storing them in an array
+//   // and sending them to /index upon render
+//   res.render('index', { title: 'Express', stream: stream });
+// });
+
+
+// This route configuraton uses the REST API to get the last 20 tweets
+// from a specified account
+router.get('/', function(req, res, next) {
   var twitter = new Twitter({
     consumer_key: process.env.TWITTER_CONSUMER_KEY,
     consumer_secret: process.env.TWITTER_CONSUMER_SECRET,
@@ -13,18 +42,16 @@ router.get('/', function(req, res, next) {
   });
 
   console.log('process:', process.env.TWITTER_CONSUMER_KEY);
-
-  var stream = twitter.stream('statuses/filter', { track: 'CNN' });
-  stream.on('data', function(event) {
-    console.log(event && event.text);
+  // https://dev.twitter.com/rest/reference/get/statuses/user_timeline
+  twitter.get('statuses/user_timeline', { screen_name: 'nodejs', count: 20 }, function(error, tweets, response) {
+    if (!error) {
+      console.log('tweets:', tweets[0]);
+      res.status(200).render('index', { title: 'Express', tweets: tweets });
+    }
+    else {
+      res.status(500).json({ error: error });
+    }
   });
-
-  stream.on('error', function(error) {
-    throw error;
-  });
-  // Hit the Twitter API and get tweets, storing them in an array
-  // and sending them to /index upon render
-  res.render('index', { title: 'Express', stream: stream });
 });
 
 module.exports = router;
