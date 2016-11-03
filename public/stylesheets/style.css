@@ -54,12 +54,33 @@ header h1 a:hover {
 #search-form input {
   background: #FFF;
   margin-bottom: 5px;
+  height: 27px;
 }
 
 #search-form input,
 #search-form button {
   border-radius: 5px;
   border: 2px solid #97B1A6;
+}
+
+
+
+/*
+  Error Message Styles
+*/
+
+.error, .message {
+  display: block;
+  text-align: center;
+  color: orange;
+}
+
+.message a {
+  color: orange;
+}
+
+.message a:hover {
+  color: #97B1A6;
 }
 
 

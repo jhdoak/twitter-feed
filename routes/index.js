@@ -51,7 +51,7 @@ router.get('/', function(req, res, next) {
     }
     else {
       console.log(error);
-      res.render('index', { error: error, tweets: null });
+      res.render('index', { error: error, tweets: null, user: req.query.username });
     }
   });
   // res.render('index');
