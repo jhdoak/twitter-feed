@@ -4,6 +4,7 @@
 
 body {
   padding: 5px;
+  background: #577399;
 }
 
 a {
@@ -27,6 +28,8 @@ header {
 
 header h1 {
   margin: 0;
+  font-family: 'Dosis', sans-serif;
+  color: #97B1A6;
 }
 
 
@@ -40,11 +43,21 @@ header h1 {
   margin: 5px 0;
   border-radius: 3px;
   border: 1px solid black;
+  background: #DFE0E2;
 }
 
 .tweet h4, .tweet h6,
 .tweet p {
   margin: 0;
+}
+
+.tweet h4 {
+  font-family: 'Dosis', sans-serif;
+}
+
+.tweet h6,
+.tweet p {
+  font-family: 'Open Sans', sans-serif;
 }
 
   /*
@@ -72,6 +85,8 @@ header h1 {
 .main-details img {
   height: 48px;
   width: 48px;
+  border-radius: 7px;
+  border: 2px solid lightgray;
 }
 
   /*
