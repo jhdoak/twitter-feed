@@ -44,6 +44,27 @@ header h1 a:hover {
 
 
 /*
+  Search Form Styles
+*/
+
+#search-form {
+  text-align: center;
+}
+
+#search-form input {
+  background: #FFF;
+  margin-bottom: 5px;
+}
+
+#search-form input,
+#search-form button {
+  border-radius: 5px;
+  border: 2px solid #97B1A6;
+}
+
+
+
+/*
   Tweet Wrapper Styles
 */
 
