@@ -35,6 +35,16 @@ header h1 {
 
 
 /*
+  Tweet Wrapper Styles
+*/
+
+#tweet-wrapper {
+  flex-wrap: wrap;
+}
+
+
+
+/*
   Tweet Styles
 */
 
@@ -44,20 +54,18 @@ header h1 {
   border-radius: 3px;
   border: 1px solid black;
   background: #DFE0E2;
-}
-
-.tweet h4, .tweet h6,
-.tweet p {
-  margin: 0;
+  width: 100%;
 }
 
 .tweet h4 {
   font-family: 'Dosis', sans-serif;
+  margin: 0;
 }
 
 .tweet h6,
 .tweet p {
   font-family: 'Open Sans', sans-serif;
+  margin: 0;
 }
 
   /*
@@ -99,5 +107,10 @@ header h1 {
 
 
 
+/* RESPONSIVE STYLING FOR MED-LG SCREENS */
+
+@media screen and (min-width: 321px) {
+
+}
 
 
