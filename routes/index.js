@@ -47,10 +47,10 @@ router.get('/', function(req, res, next) {
   twitter.get('statuses/user_timeline', { screen_name: search_screen_name, count: 20 }, function(error, tweets, response) {
     if (!error) {
       console.log('tweets:', tweets[0]);
-      res.status(200).render('index', { title: 'Express', tweets: tweets });
+      res.render('index', { tweets: tweets });
     }
     else {
-      res.status(500).json({ error: error });
+      res.render('index', { error: error, tweets: null });
     }
   });
   // res.render('index');
