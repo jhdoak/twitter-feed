@@ -34,6 +34,7 @@ var Twitter = require('twitter');
 // This route configuraton uses the REST API to get the last 20 tweets
 // from a specified account
 router.get('/', function(req, res, next) {
+  var search_screen_name = req.query.username ? req.query.username : "cnnpolitics";
   var twitter = new Twitter({
     consumer_key: process.env.TWITTER_CONSUMER_KEY,
     consumer_secret: process.env.TWITTER_CONSUMER_SECRET,
@@ -43,7 +44,7 @@ router.get('/', function(req, res, next) {
 
   console.log('process:', process.env.TWITTER_CONSUMER_KEY);
   // https://dev.twitter.com/rest/reference/get/statuses/user_timeline
-  twitter.get('statuses/user_timeline', { screen_name: 'cnnpolitics', count: 20 }, function(error, tweets, response) {
+  twitter.get('statuses/user_timeline', { screen_name: search_screen_name, count: 20 }, function(error, tweets, response) {
     if (!error) {
       console.log('tweets:', tweets[0]);
       res.status(200).render('index', { title: 'Express', tweets: tweets });
