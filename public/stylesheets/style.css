@@ -109,8 +109,20 @@ header h1 {
 
 /* RESPONSIVE STYLING FOR MED-LG SCREENS */
 
-@media screen and (min-width: 321px) {
+@media screen and (min-width: 350px) {
+  .tweet {
+    width: 48%;
+    margin: 5px 1%;
+  }
 
+  .tweet h4 {
+    font-size: 1.1em;
+    margin-bottom: 2px;
+  }
+
+  .tweet h6 {
+    font-size: .75em;
+  }
 }
 
 
