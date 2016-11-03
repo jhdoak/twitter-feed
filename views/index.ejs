@@ -18,6 +18,16 @@
       <button type="submit">Submit</button>
     </form>
 
+    <% if (typeof error !== 'undefined') { %>
+      <% error.forEach(function(error) { %>
+        <% if (error.code == 34) { %>
+          <span class='error'>That user does not exist.</span>
+        <% } else { %>
+          <span class='error'><%= error.message %></span>
+        <% } %>
+      <% }) %>
+    <% } %>
+
     <% if (tweets !== null) { %>
       <div id='tweet-wrapper' class='container'>
         <% tweets.forEach(function(tweet) { %>
