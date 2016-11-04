@@ -1,15 +1,15 @@
-# Twitter Feed  
+# Twitter Feed
 
 ## Overview
 
 This node/express based application allows users to find a feed of any Twitter user's most recent tweets. I created this application in pursuit of a position as a Web Developer at Turner/CNN.
 
-Deployed Product: [CNN Twitter Feed](https://cnn-twitter-feed.herokuapp.com/)  
+Deployed Product: [CNN Twitter Feed](https://cnn-twitter-feed.herokuapp.com/)
 Trello Board: [CNN Twitter Feed](https://trello.com/b/nNStNPt8/cnn-twitter-feed)
 
 ## Finished Product:
 
-[![Finished Product](public/images/screenshot.png "Finished Product")](https://cnn-twitter-feed.herokuapp.com/)
+[![Finished Product](public/images/screenshot-new.png "Finished Product")](https://cnn-twitter-feed.herokuapp.com/)
 
 ## Technologies Used
 
@@ -149,7 +149,7 @@ Your API keys will not be automatically sourced each time you open your terminal
 
 My name is Justin Doak, and I'm a web developer with a desire to push myself to learn, grow, and create great applications. Check out what I've been up to, and get in touch! I'd love to hear from you.
 
-Website: [jhdoak.com](https://www.jhdoak.com)  
-GitHub: [jhdoak](https://github.com/jhdoak)  
-Email: [justin@jhdoak.com](mailto:justin@jhdoak.com)  
+Website: [jhdoak.com](https://www.jhdoak.com)
+GitHub: [jhdoak](https://github.com/jhdoak)
+Email: [justin@jhdoak.com](mailto:justin@jhdoak.com)
 Twitter: [@justin_doak](https://www.twitter.com/justin_doak)
