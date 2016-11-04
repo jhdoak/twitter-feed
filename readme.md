@@ -2,7 +2,7 @@
 
 ## Overview
 
-This node/express based application allows users to find a feed of any Twitter user's most recent tweets. I created this application in pursuit of a Web Developer position at Turner/CNN.
+This node/express based application allows users to find a feed of any Twitter user's most recent tweets. I created this application in pursuit of a position as a Web Developer at Turner/CNN.
 
 Deployed Product: [CNN Twitter Feed](https://cnn-twitter-feed.herokuapp.com/)  
 Trello Board: [CNN Twitter Feed](https://trello.com/b/nNStNPt8/cnn-twitter-feed)
