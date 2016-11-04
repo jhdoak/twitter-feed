@@ -17,6 +17,10 @@ a {
   display: flex;
 }
 
+.mid-screen {
+  display: none;
+}
+
 
 
 /*
@@ -64,8 +68,22 @@ header h1 a:hover {
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
 
+#search-form .form-group {
+  display: inline-block;
+}
+
+#search-form label {
+  color: lightgray;
+}
+
+.small-screen label {
+  margin-bottom: 2px;
+  display: block;
+  font-size: .8em;
+}
+
 #search-form input[type="number"] {
-  width: 36px;
+  width: 37px;
 }
 
 #search-form button {
@@ -185,6 +203,24 @@ header h1 a:hover {
 /* RESPONSIVE STYLING FOR MED-LG SCREENS */
 
 @media screen and (min-width: 350px) {
+  .small-screen {
+    display: none;
+  }
+
+  .mid-screen {
+    display: initial;
+  }
+
+  #search-form .form-group,
+  #search-form .form-group label,
+  #search-form .form-group input[type='text'] {
+    display: block;
+  }
+
+  #search-form .form-group input {
+    margin: 0 auto 5px;
+  }
+
   #tweet-wrapper {
     margin-top: 5px;
   }
@@ -206,6 +242,11 @@ header h1 a:hover {
 }
 
 @media screen and (min-width: 751px) {
+  #search-form .form-group label,
+  #search-form .form-group input[type='text'] {
+    display: inline-block;
+  }
+
   .tweet {
     border-radius: 7px;
     margin: 10px 1%;
