@@ -26,4 +26,9 @@ router.get('/', function(req, res, next) {
   });
 });
 
+// Redirect all urls that other than '/' back to the root route.
+router.get('/*', function(req, res, next) {
+  res.redirect('/');
+});
+
 module.exports = router;
