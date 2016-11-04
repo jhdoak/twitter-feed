@@ -4,7 +4,7 @@
 
 This node/express based application allows users to find a feed of any Twitter user's most recent tweets. I created this application in pursuit of a position as a Web Developer at Turner/CNN.
 
-Deployed Product: [CNN Twitter Feed](https://cnn-twitter-feed.herokuapp.com/)
+Deployed Product: [CNN Twitter Feed](https://cnn-twitter-feed.herokuapp.com/)  
 Trello Board: [CNN Twitter Feed](https://trello.com/b/nNStNPt8/cnn-twitter-feed)
 
 ## Finished Product:
@@ -24,6 +24,7 @@ Trello Board: [CNN Twitter Feed](https://trello.com/b/nNStNPt8/cnn-twitter-feed)
 
 * Users are initially presented with the most recent tweets from a default account (currently [@CNNPolitics](https://twitter.com/CNNPolitics)).
 * Users can search by username to get the feed of that user's most recent tweets.
+* Users can determine how many tweets they want to get back from their search.
 * Any errors (user doesn't exist, user has no tweets, etc.) are handled and presented to the user.
 * Users can click the handle of the tweet's author to visit their profile on Twitter.
 
@@ -63,7 +64,8 @@ I started development with the Twitter Streaming API with the intention of devel
 There are many things I would love to change, modify, or add to this project.
 
 #### Additional Features
-* Give the user more search parameters. Allow them to search by username, number of tweets, and keyword as well. The implementation of this may be limited by Twitter's API, but I think there's a good chance of finding a way to implement this feature.
+* Add some form validation for prevent the form from being sent if the number of tweets desired is greater than the limit of 20. The number input currently has a max value of 20, but a user on a mobile device can enter a higher number and get that number of tweets back.
+* Give the user more search parameters. Allow them to search by keyword/hashtag in addition to the existing username and tweet count parameters. The implementation of this may be limited by Twitter's API, but I think there's a good chance of finding a way to implement this feature.
 * Add a pagination feature, putting every 'x' number of tweets on their own page and allowing users to go through those pages.
 * Find a way to make links clickable within a tweet's text, whether to a user, hashtag, media, or an external page. Right now they're just text, but the tweet object does return a tweet's entities, which I'm sure can be used to accomplish this.
 
