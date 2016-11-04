@@ -68,6 +68,15 @@ header h1 a:hover {
   color: #577399;
 }
 
+#search-form button:hover {
+  color: #97B1A6;
+}
+
+#search-form input:focus,
+#search-form button:focus {
+    outline: none;
+}
+
 
 /*
   Error Message Styles
