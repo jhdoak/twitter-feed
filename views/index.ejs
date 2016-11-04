@@ -32,7 +32,7 @@
 
     <% if (tweets !== null) { %>
       <% if (tweets.length == 0) { %>
-        <span class='error'><%= tweet.user.name %> has no tweets.</span>
+        <span class='message'><a href="http://www.twitter.com/<%= user %>">@<%= user %></a> has no tweets.</span>
       <% } else { %>
         <span class='message'>Tweets for <a href="http://www.twitter.com/<%= tweets[0].user.screen_name %>">@<%= tweets[0].user.screen_name %></a></span>
         <div id='tweet-wrapper' class='container'>

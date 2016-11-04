@@ -34,11 +34,11 @@ header h1 {
 }
 
 header h1 a {
-  color: #97B1A6;
+  color: orange;
 }
 
 header h1 a:hover {
-  color: orange;
+  color: #97B1A6;
 }
 
 
@@ -75,6 +75,7 @@ header h1 a:hover {
   color: orange;
 }
 
+.error, .message,
 .message a {
   color: orange;
 }

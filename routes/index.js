@@ -46,12 +46,15 @@ router.get('/', function(req, res, next) {
   // https://dev.twitter.com/rest/reference/get/statuses/user_timeline
   twitter.get('statuses/user_timeline', { screen_name: search_screen_name, count: 20 }, function(error, tweets, response) {
     if (!error) {
-      console.log('tweets length:', tweets.length);
+      if (tweets.length == 0) {
+        res.render('index', { tweets: tweets, user: search_screen_name });
+      }
+      console.log('tweets:', tweets);
       res.render('index', { tweets: tweets });
     }
     else {
       console.log(error);
-      res.render('index', { error: error, tweets: null, user: req.query.username });
+      res.render('index', { error: error, tweets: null, user: search_screen_name });
     }
   });
   // res.render('index');
