@@ -64,6 +64,10 @@ header h1 a:hover {
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
 
+#search-form input[type="number"] {
+  width: 36px;
+}
+
 #search-form button {
   background: white;
   color: #577399;

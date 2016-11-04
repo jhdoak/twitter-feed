@@ -6,6 +6,7 @@ var Twitter = require('twitter');
 // from a specified account
 router.get('/', function(req, res, next) {
   var search_screen_name = req.query.username ? req.query.username : "cnnpolitics";
+  var tweet_count = req.query.count ? req.query.count : 20;
   var twitter = new Twitter({
     consumer_key: process.env.TWITTER_CONSUMER_KEY,
     consumer_secret: process.env.TWITTER_CONSUMER_SECRET,
@@ -13,7 +14,7 @@ router.get('/', function(req, res, next) {
     access_token_secret: process.env.TWITTER_ACCESS_TOKEN_SECRET
   });
 
-  twitter.get('statuses/user_timeline', { screen_name: search_screen_name, count: 20 }, function(error, tweets, response) {
+  twitter.get('statuses/user_timeline', { screen_name: search_screen_name, count: tweet_count }, function(error, tweets, response) {
     if (!error) {
       if (tweets.length == 0) {
         res.render('index', { tweets: tweets, user: search_screen_name });
